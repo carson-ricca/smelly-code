@@ -1,1 +1,1 @@
-# smelly-code
+# Smelly Code
