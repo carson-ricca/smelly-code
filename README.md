@@ -22,6 +22,6 @@
 - Too Many Parameters:
   - A very long list of parameters.
 - God Line:
-  - An insanely long line of code.
+  - An insanely long line of code (implemented).
 - Identifier Size:
   - The identifier is excessively short or long.
