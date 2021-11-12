@@ -20,7 +20,7 @@
 - Speculative Generality:
   - Methods whose only users are test cases.
 - Too Many Parameters:
-  - A very long list of parameters.
+  - A very long list of parameters (implemented).
 - God Line:
   - An insanely long line of code (implemented).
 - Identifier Size:
