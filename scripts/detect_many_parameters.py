@@ -9,9 +9,6 @@ def detect_many_parameters(file, count):
     :param file: The file to evaluate.
     :param count: The pre-existing count of too_many_parameters in the directory.
     :return: The updated count of too_many_parameters in the directory.
-    :param file:
-    :param count:
-    :return:
     """
     pattern = '\(([^)]+)'
     lines = file.readlines()
