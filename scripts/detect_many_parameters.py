@@ -1,4 +1,4 @@
-import re
+import ast
 
 from constants import Constants
 
@@ -10,12 +10,9 @@ def detect_many_parameters(file, count):
     :param count: The pre-existing count of too_many_parameters in the directory.
     :return: The updated count of too_many_parameters in the directory.
     """
-    pattern = '\(([^)]+)'
-    lines = file.readlines()
-    for line in lines:
-        if 'def ' in line:
-            parameters = re.search(pattern, line).group(1)
-            parameters_list = parameters.split(',')
-            if len(parameters_list) > Constants.MAX_PARAMETERS:
+    ast_root = ast.parse(file.read())
+    for node in ast.walk(ast_root):
+        if isinstance(node, ast.FunctionDef):
+            if len(node.args.args) > Constants.MAX_PARAMETERS:
                 count += 1
     return count

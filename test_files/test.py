@@ -8,7 +8,7 @@ def test_method_2(a, b, c, d):
     print(value)
 
 
-def test_method_3(a):
+def test_method_3():
     a = 1
     b = 1
     c = a + b
