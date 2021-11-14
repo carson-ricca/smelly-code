@@ -13,18 +13,18 @@ def detect_identifier_size(file, count):
     ast_root = ast.parse(file.read())
     for node in ast.walk(ast_root):
         if isinstance(node, ast.FunctionDef):
-            if check_identifier_length(node.name) is True:
+            if _check_identifier_length(node.name) is True:
                 count += 1
         if isinstance(node, ast.Name):
-            if check_identifier_length(node.id) is True:
+            if _check_identifier_length(node.id) is True:
                 count += 1
         if isinstance(node, ast.ClassDef):
-            if check_identifier_length(node.name) is True:
+            if _check_identifier_length(node.name) is True:
                 count += 1
     return count
 
 
-def check_identifier_length(identifier):
+def _check_identifier_length(identifier):
     """
     Determines if the identifier is too long in comparison to a set constant.
     :param identifier: The identifier to check.

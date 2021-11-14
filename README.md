@@ -18,11 +18,13 @@
 ### Method Level Smells
 
 - Long Method:
-    - Long procedures that are hard to understand.
+    - Long procedures that are hard to understand (implemented).
+    - [Rule of 30](https://dzone.com/articles/rule-30-–-when-method-class-or)
 - Message Chains:
     - Method calling a different method which calls a different method which calls a different method… and on and on.
 - Too Many Parameters:
     - A very long list of parameters (implemented).
+    - Parameter Number from _"Clean Code: A Handbook of Agile Software Craftsmanship"_
 - God Line:
     - An insanely long line of code (implemented).
 - Identifier Size:

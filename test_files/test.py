@@ -8,6 +8,43 @@ def test_method_2(a, b, c, d):
     print(value)
 
 
+def test_method_3(a):
+    a = 1
+    b = 1
+    c = a + b
+    a = 1
+    b = 1
+    c = a + b
+    a = 1
+    b = 1
+    c = a + b
+    a = 1
+    b = 1
+    c = a + b
+    a = 1
+    b = 1
+    c = a + b
+    a = 1
+    b = 1
+    c = a + b
+    a = 1
+    b = 1
+    c = a + b
+    a = 1
+    b = 1
+    c = a + b
+    a = 1
+    b = 1
+    c = a + b
+    a = 1
+    b = 1
+    c = a + b
+    a = 1
+    b = 1
+    c = a + b
+    print(c)
+
+
 if __name__ == "__main__":
     value1 = 'Hello World'
     value2 = 'This line is a line that is too long for Python, AKA it is a god line!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!'
