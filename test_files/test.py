@@ -1,3 +1,9 @@
+class LazyClass:
+    def __init__(self, a, b):
+        self.a = a
+        self.b = b
+
+
 def test_method_1(a, b):
     value = 'Okay Parameters'
     print(value)

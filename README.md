@@ -10,10 +10,10 @@
     - Trying to do too much and has too many instance variables.
 - Middle Man:
     - Lots of methods are delegated to other classes
-- Data Clump:
-    - Bunches of data clump together in a lot of places.
-- Freeloader:
-    - Class doing little.
+- Data Class:
+  - Classes have nothing but fields, and setters or getters for these fields.
+- Lazy Class:
+    - Class doing little (initial implementation completed).
 
 ### Method Level Smells
 

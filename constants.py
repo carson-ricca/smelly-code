@@ -10,3 +10,6 @@ class Constants:
 
     # The maximum allowed number of lines for a function.
     MAX_FUNCTION_LENGTH = 30
+
+    # An arbitrary number to indicate that a class is too short.
+    MIN_CLASS_LENGTH = 10
