@@ -11,7 +11,7 @@
 - Middle Man:
     - Lots of methods are delegated to other classes
 - Data Class:
-  - Classes have nothing but fields, and setters or getters for these fields.
+    - Classes have nothing but fields, and setters or getters for these fields.
 - Lazy Class:
     - Class doing little (initial implementation completed).
 
@@ -20,8 +20,9 @@
 - Long Method:
     - Long procedures that are hard to understand (implemented).
     - [Rule of 30](https://dzone.com/articles/rule-30-–-when-method-class-or)
-- Message Chains:
-    - Method calling a different method which calls a different method which calls a different method… and on and on.
+- Method Chains:
+    - Method calling a different method which calls a different method which calls a different method… and on and on (
+      implemented).
 - Too Many Parameters:
     - A very long list of parameters (implemented).
     - Parameter Number from _"Clean Code: A Handbook of Agile Software Craftsmanship"_
