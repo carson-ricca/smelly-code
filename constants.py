@@ -13,3 +13,6 @@ class Constants:
 
     # An arbitrary number to indicate that a class is too short.
     MIN_CLASS_LENGTH = 10
+
+    # An arbitrary number to indicate that a class is too long.
+    MAX_CLASS_LENGTH = 100

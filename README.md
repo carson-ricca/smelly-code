@@ -7,7 +7,7 @@
 - Cyclomatic Complexity:
     - Too many branches and loops.
 - Large Class:
-    - Trying to do too much and has too many instance variables.
+    - Trying to do too much and has too many instance variables (initial implementation completed).
 - Middle Man:
     - Lots of methods are delegated to other classes
 - Data Class:

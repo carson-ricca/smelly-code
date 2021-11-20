@@ -4,6 +4,7 @@ from scripts.detect_function_chains import detect_function_chains
 from scripts.detect_function_length import detect_function_length
 from scripts.detect_god_line import detect_god_line
 from scripts.detect_identifier_size import detect_identifier_size
+from scripts.detect_large_class import detect_large_class
 from scripts.detect_lazy_class import detect_lazy_class
 from scripts.detect_many_parameters import detect_many_parameters
 
@@ -20,6 +21,7 @@ def read_files(directory):
     identifier_size = 0
     function_length = 0
     lazy_class = 0
+    large_class = 0
     function_chains = 0
 
     files = directory.glob('**/*.py')
@@ -37,6 +39,8 @@ def read_files(directory):
             lazy_class = detect_lazy_class(f, lazy_class)
             f.seek(0)
             function_chains = detect_function_chains(f, function_chains)
+            f.seek(0)
+            large_class = detect_large_class(f, large_class)
     print('Count: {0}\nGod Lines: {1}\nToo Many Parameters: {2}\nIdentifier Size: {3}\nFunction Too Long: {4}\nLazy '
-          'Class: {5}\nFunction Chains: {6}'
-          .format(count, god_lines, too_many_parameters, identifier_size, function_length, lazy_class, function_chains))
+          'Class: {5}\nFunction Chains: {6}\nLarge Class: {7}'
+          .format(count, god_lines, too_many_parameters, identifier_size, function_length, lazy_class, function_chains, large_class))
