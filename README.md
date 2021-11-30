@@ -11,7 +11,7 @@
 - Middle Man:
     - Lots of methods are delegated to other classes
 - Data Class:
-    - Classes have nothing but fields, and setters or getters for these fields.
+    - Classes have nothing but fields, and setters or getters for these fields (implemented).
 - Lazy Class:
     - Class doing little (initial implementation completed).
 

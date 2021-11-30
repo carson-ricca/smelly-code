@@ -1,5 +1,6 @@
 from pathlib import Path
 
+from scripts.detect_data_class import detect_data_class
 from scripts.detect_function_chains import detect_function_chains
 from scripts.detect_function_length import detect_function_length
 from scripts.detect_god_line import detect_god_line
@@ -23,6 +24,7 @@ def read_files(directory):
     lazy_class = 0
     large_class = 0
     function_chains = 0
+    data_class = 0
 
     files = directory.glob('**/*.py')
     for file in files:
@@ -41,6 +43,8 @@ def read_files(directory):
             function_chains = detect_function_chains(f, function_chains)
             f.seek(0)
             large_class = detect_large_class(f, large_class)
+            f.seek(0)
+            data_class = detect_data_class(f, data_class)
     print('Count: {0}\nGod Lines: {1}\nToo Many Parameters: {2}\nIdentifier Size: {3}\nFunction Too Long: {4}\nLazy '
-          'Class: {5}\nFunction Chains: {6}\nLarge Class: {7}'
-          .format(count, god_lines, too_many_parameters, identifier_size, function_length, lazy_class, function_chains, large_class))
+          'Class: {5}\nFunction Chains: {6}\nLarge Class: {7}\nData Class: {8}'
+          .format(count, god_lines, too_many_parameters, identifier_size, function_length, lazy_class, function_chains, large_class, data_class))

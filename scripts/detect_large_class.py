@@ -13,7 +13,6 @@ def detect_large_class(file, count):
     ast_root = ast.parse(file.read())
     for node in ast.walk(ast_root):
         if isinstance(node, ast.ClassDef):
-            print(ast.dump(node))
             if compute_length(node) > Constants.MAX_CLASS_LENGTH:
                 count += 1
     return count
