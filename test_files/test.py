@@ -6,7 +6,7 @@ class LazyClass:
 
 def test_method_1(a, b):
     value = 'Okay Parameters'
-    print(value)
+    print(f'{a}-{b}')
 
 
 def test_method_2(a, b, c, d):

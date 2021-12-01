@@ -16,3 +16,6 @@ class Constants:
 
     # An arbitrary number to indicate that a class is too long.
     MAX_CLASS_LENGTH = 100
+
+    # The percentage of functions that delegate to other functions to be determined a middle man class.
+    MIDDLE_MAN_PERCENTAGE = 0.5

@@ -8,6 +8,7 @@ from scripts.detect_identifier_size import detect_identifier_size
 from scripts.detect_large_class import detect_large_class
 from scripts.detect_lazy_class import detect_lazy_class
 from scripts.detect_many_parameters import detect_many_parameters
+from scripts.detect_middle_man import detect_middle_man
 
 
 def read_files(directory):
@@ -25,6 +26,7 @@ def read_files(directory):
     large_class = 0
     function_chains = 0
     data_class = 0
+    middle_man = 0
 
     files = directory.glob('**/*.py')
     for file in files:
@@ -45,6 +47,9 @@ def read_files(directory):
             large_class = detect_large_class(f, large_class)
             f.seek(0)
             data_class = detect_data_class(f, data_class)
+            f.seek(0)
+            middle_man = detect_middle_man(f, middle_man)
     print('Count: {0}\nGod Lines: {1}\nToo Many Parameters: {2}\nIdentifier Size: {3}\nFunction Too Long: {4}\nLazy '
-          'Class: {5}\nFunction Chains: {6}\nLarge Class: {7}\nData Class: {8}'
-          .format(count, god_lines, too_many_parameters, identifier_size, function_length, lazy_class, function_chains, large_class, data_class))
+          'Class: {5}\nFunction Chains: {6}\nLarge Class: {7}\nData Class: {8}\nMiddle Man: {9}'
+          .format(count, god_lines, too_many_parameters, identifier_size, function_length, lazy_class, function_chains,
+                  large_class, data_class, middle_man))

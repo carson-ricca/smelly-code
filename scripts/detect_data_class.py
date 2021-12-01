@@ -12,7 +12,6 @@ def detect_data_class(file, count):
         if isinstance(node, ast.ClassDef):
             nodes = node.body
             if _determine_only_setters_and_getters(nodes):
-                print(node.name)
                 count += 1
     return count
 
@@ -84,7 +83,7 @@ def _is_property_node(node):
 
 def _is_manual_assignment(node):
     """
-    Determines if for manual setter and getters they were setup properly.
+    Determines if for manual setter and getters they were set up properly.
     :param node: The node to check.
     :return: A boolean.
     """

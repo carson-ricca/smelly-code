@@ -9,7 +9,7 @@
 - Large Class:
     - Trying to do too much and has too many instance variables (initial implementation completed).
 - Middle Man:
-    - Lots of methods are delegated to other classes
+    - Lots of methods are delegated to other classes (implemented).
 - Data Class:
     - Classes have nothing but fields, and setters or getters for these fields (implemented).
 - Lazy Class:
