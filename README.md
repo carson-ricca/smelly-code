@@ -28,5 +28,6 @@
     - Parameter Number from _"Clean Code: A Handbook of Agile Software Craftsmanship"_
 - God Line:
     - An insanely long line of code (implemented).
+    - Number of characters per line comes from PyCharm's warning.
 - Identifier Size:
     - The identifier is excessively short or long (implemented).
