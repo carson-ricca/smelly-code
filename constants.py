@@ -8,6 +8,9 @@ class Constants:
     # The maximum allowed length of an identifier based on the PEP-8 standard.
     MAX_IDENTIFIER_LENGTH = 79
 
+    # The minimum allowed length of an identifier.
+    MIN_IDENTIFIER_LENGTH = 3
+
     # The maximum allowed number of lines for a function.
     MAX_FUNCTION_LENGTH = 30
 

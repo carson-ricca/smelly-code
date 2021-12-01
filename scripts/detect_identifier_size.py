@@ -5,7 +5,7 @@ from constants import Constants
 
 def detect_identifier_size(file, count):
     """
-    Determines if any of the identifiers are too long.
+    Determines if any of the identifiers are too long or too short.
     :param file: The file to evaluate.
     :param count: The pre-existing count of identifier_size in the directory.
     :return: The updated count of identifier_size in the directory.
@@ -26,10 +26,10 @@ def detect_identifier_size(file, count):
 
 def _check_identifier_length(identifier):
     """
-    Determines if the identifier is too long in comparison to a set constant.
+    Determines if the identifier is too long or too short in comparison to a set constant.
     :param identifier: The identifier to check.
-    :return: A boolean that describes whether the identifier is too long.
+    :return: A boolean that describes whether the identifier is too long or too short.
     """
-    if len(identifier) > Constants.MAX_IDENTIFIER_LENGTH:
+    if len(identifier) > Constants.MAX_IDENTIFIER_LENGTH or len(identifier) < Constants.MIN_IDENTIFIER_LENGTH:
         return True
     return False
