@@ -1,5 +1,6 @@
 from pathlib import Path
 
+from scripts.detect_cyclomatic_complexity import detect_cyclomatic_complexity
 from scripts.detect_data_class import detect_data_class
 from scripts.detect_function_chains import detect_function_chains
 from scripts.detect_function_length import detect_function_length
@@ -27,6 +28,7 @@ def read_files(directory):
     function_chains = 0
     data_class = 0
     middle_man = 0
+    cyclomatic_complexity = 0
 
     files = directory.glob('**/*.py')
     for file in files:
@@ -49,7 +51,10 @@ def read_files(directory):
             data_class = detect_data_class(f, data_class)
             f.seek(0)
             middle_man = detect_middle_man(f, middle_man)
+            f.seek(0)
+            cyclomatic_complexity = detect_cyclomatic_complexity(f, cyclomatic_complexity)
     print('Count: {0}\nGod Lines: {1}\nToo Many Parameters: {2}\nIdentifier Size: {3}\nFunction Too Long: {4}\nLazy '
-          'Class: {5}\nFunction Chains: {6}\nLarge Class: {7}\nData Class: {8}\nMiddle Man: {9}'
+          'Class: {5}\nFunction Chains: {6}\nLarge Class: {7}\nData Class: {8}\nMiddle Man: {9}\nCyclomatic '
+          'Complexity: {10} '
           .format(count, god_lines, too_many_parameters, identifier_size, function_length, lazy_class, function_chains,
-                  large_class, data_class, middle_man))
+                  large_class, data_class, middle_man, cyclomatic_complexity))

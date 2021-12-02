@@ -22,3 +22,9 @@ class Constants:
 
     # The percentage of functions that delegate to other functions to be determined a middle man class.
     MIDDLE_MAN_PERCENTAGE = 0.5
+
+    # The maximum cyclomatic complexity allowed for a class.
+    MAX_CYCLOMATIC_COMPLEXITY = 20
+
+    # A list describing what increase the cyclomatic complexity by 1.
+    CYCLOMATIC_COMPLEXITY_FACTORS = ['if ', 'for ', 'while ', 'case ', 'except ', ' and ', ' or ', 'elif ', 'def ']

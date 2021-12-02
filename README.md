@@ -5,15 +5,15 @@
 ### Class Level Smells
 
 - Cyclomatic Complexity:
-    - Too many branches and loops.
+    - Too many branches and loops (implemented).
 - Large Class:
-    - Trying to do too much and has too many instance variables (implementation completed).
+    - Trying to do too much and has too many instance variables (implemented).
 - Middle Man:
     - Lots of methods are delegated to other classes (implemented).
 - Data Class:
     - Classes have nothing but fields, and setters or getters for these fields (implemented).
 - Lazy Class:
-    - Class doing little (implementation completed).
+    - Class doing little (implemented).
 
 ### Method Level Smells
 

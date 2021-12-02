@@ -13,9 +13,8 @@ def detect_middle_man(file, count):
     for node in ast.walk(ast_root):
         if isinstance(node, ast.ClassDef):
             nodes = node.body
-            if node.name == 'MiddleMan':
-                if _determine_middle_man(nodes):
-                    count += 1
+            if _determine_middle_man(nodes):
+                count += 1
     return count
 
 
@@ -40,4 +39,6 @@ def _determine_middle_man(nodes):
                     total_num_of_delegates += 1
             else:
                 total_num_of_functions -= 1
+    if total_num_of_functions == 0:
+        return False
     return (total_num_of_delegates / total_num_of_functions) >= Constants.MIDDLE_MAN_PERCENTAGE
