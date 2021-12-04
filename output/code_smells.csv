@@ -1,0 +1,8 @@
+File Name,God Lines,Too Many Parameters,Identifier Size,Function Length,Lazy Class,Function Chains,Large Class,Data Class,Middle Man,Cyclomatic Complexity
+test_cyclomatic_complexity.py,0,1,45,1,0,0,0,0,0,1
+__init__.py,0,0,0,0,0,0,0,0,0,0
+test.py,1,1,61,1,1,0,0,1,0,0
+test_data_class.py,0,0,1,0,0,0,0,1,0,0
+test_middle_man.py,0,1,3,0,0,0,0,0,1,0
+test_method_chain.py,0,0,3,0,0,1,0,0,0,0
+test_large_class.py,30,1,0,1,0,0,1,0,0,0

@@ -1,6 +1,9 @@
 from pathlib import Path
 
-from scripts import read_files
+from detect_code_smells import detect_code_smells
+
+INPUT_PATH = Path('test_files')
+OUTPUT_PATH = Path('output')
 
 if __name__ == "__main__":
-    read_files(Path('test_files'))
+    detect_code_smells(INPUT_PATH, OUTPUT_PATH)
