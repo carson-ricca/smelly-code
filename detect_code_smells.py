@@ -1,5 +1,6 @@
 import os.path
 import pandas as pd
+from matplotlib import pyplot as plt
 from pathlib import Path
 
 from scripts import detect_god_line, detect_many_parameters, detect_identifier_size, detect_function_length, \
@@ -62,7 +63,32 @@ def detect_code_smells(input_path, output_path):
             dataframe = _add_to_dataframe(god_lines, too_many_parameters, identifier_size, function_length, lazy_class,
                                           function_chains, large_class, data_class, middle_man, cyclomatic_complexity,
                                           file_name, dataframe)
-            dataframe.to_csv(f'{output_path}/code_smells.csv', index=False)
+    dataframe.to_csv(f'{output_path}/code_smells.csv', index=False)
+    _plot_code_smells(dataframe)
+
+
+def _plot_code_smells(dataframe):
+    """
+    Plots the data for all files.
+    :param dataframe: The dataframe that contains all detected code smells.
+    """
+    total_code_smells = {
+        'GL': dataframe['God Lines'].sum(),
+        'TMP': dataframe['Too Many Parameters'].sum(),
+        'IS': dataframe['Identifier Size'].sum(),
+        'FL': dataframe['Function Length'].sum(),
+        'LC': dataframe['Lazy Class'].sum(),
+        'FC': dataframe['Function Chains'].sum(),
+        'LGC': dataframe['Large Class'].sum(),
+        'DC': dataframe['Data Class'].sum(),
+        'MM': dataframe['Middle Man'].sum(),
+        'CC': dataframe['Cyclomatic Complexity'].sum()
+    }
+    plt.bar(total_code_smells.keys(), total_code_smells.values())
+    plt.ylabel('Count')
+    plt.xlabel('Code Smells')
+    plt.title('Number of Code Smells Detected')
+    plt.show()
 
 
 def _add_to_dataframe(god_lines, too_many_parameters, identifier_size, function_length, lazy_class, function_chains,

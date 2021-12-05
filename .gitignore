@@ -134,3 +134,4 @@ Pipfile
 
 # IDE
 .idea
+.DS_Store
