@@ -1,9 +1,8 @@
 import unittest
-from pathlib import Path
 
 from detect_code_smells import detect_code_smells
 
-INPUT_PATH = Path('test_files')
+INPUT_PATH = 'test_files'
 
 
 class TestCodeSmellDetection(unittest.TestCase):
