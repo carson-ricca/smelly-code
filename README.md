@@ -1,7 +1,71 @@
 # Smelly Code
 
+## Running the Project
+
+Everything required to run the project including all necessary data is already in the project. In order to run the
+project ensure that `Python 3` is installed on your machine, then continue with the following steps:
+
+> 1. Run `pip install -r requirements.txt`
+> 2. Run `python3 main.py` to run the code detection on the _Canvas Gamification_ repository.
+> 3. The plot of all code smells for the repository will be displayed upon completion of the program.
+> 4. The code smells will be exported to `output/code_smells.csv`.
+> 5. To run the unit tests, use the command `python3 -m unittest discover -s tests`.
+
+## Project Status
+
+- The project is currently at a place where I am confident that everything is completed properly.
+- There could be small room for improvements in the detection methods that might improve the accuracy. I do not believe
+  this would increase the amount detected by much.
+- The accuracy can also be fine-tuned by changing the values used for detection in `constants.py`, I determined these
+  initial values based on research, and my own personal development experience. A better selection for these values
+  could be possibly be proposed by an expert and would help increase the accuracy of the detection.
+
 ## File Structure
 
+```
+.
++-- .github/workflows (contains workflow for automated testing on github)
+|   +-- ci.yml
++-- data
+|   +-- canvas-gamification-master.zip (raw repo downloaded from GitHub)
+|   +-- canvas-gamification-master (unzipped data folder)
++-- output (contains exported csv with all code smells)
+|   +-- code_smells.csv
++-- scripts (contains all code smell detection)
+|   +-- __init__.py
+|   +-- detect_cyclomatic_complexity.py
+|   +-- detect_data_class.py
+|   +-- detect_function_chains.py
+|   +-- detect_function_length.py
+|   +-- detect_god_line.py
+|   +-- detect_identifier_size.py
+|   +-- detect_large_class.py
+|   +-- detect_lazy_class.py
+|   +-- detect_many_parameters.py
+|   +-- detect_middle_man.py
++-- test_files (ensure code smell detection works as expected)
+|   +-- __init__.py
+|   +-- test.py
+|   +-- test_cyclomatic_complexity.py
+|   +-- test_data_class.py
+|   +-- test_large_class.py
+|   +-- test_method_class.py
+|   +-- test_middle_man.py
++-- tests (test used to ensure code works as expected)
+|   +-- __init__.py
+|   +-- test_code_smell_detection.py
++-- util (util functions used across scripts)
+|   +-- __init__.py
+|   +-- compute_length.py
+|   +-- file.py
++-- constants.py
++-- detect_code_smells.py
++-- export_dataframe.py
++-- main.py
++-- plot_dataframe.py
++-- README.md
++-- requirements.txt
+```
 
 ## Project Plan
 
