@@ -1,4 +1,5 @@
-import ast, asttokens
+import ast
+import asttokens
 
 from constants import Constants
 
