@@ -19,6 +19,9 @@ project ensure that `Python 3` is installed on your machine, then continue with 
 - The accuracy can also be fine-tuned by changing the values used for detection in `constants.py`, I determined these
   initial values based on research, and my own personal development experience. A better selection for these values
   could be possibly be proposed by an expert and would help increase the accuracy of the detection.
+- Testing Strategy:
+    - In order to test that my code smell detection is working as expected I implemented unit-testing that tests the
+      detection of the ten code smells I selected for this project.
 
 ## File Structure
 
