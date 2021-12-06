@@ -1,3 +1,4 @@
+import glob
 import os.path
 import pandas as pd
 from pathlib import Path
@@ -19,7 +20,7 @@ def detect_code_smells(input_path):
                  'Function Chains', 'Large Class', 'Data Class', 'Middle Man', 'Cyclomatic Complexity']
     )
     count = 0
-    files = input_path.glob('**/*.py')
+    files = glob.glob(input_path + '/**/*.py', recursive=True)
     for file in files:
         god_lines = 0
         too_many_parameters = 0

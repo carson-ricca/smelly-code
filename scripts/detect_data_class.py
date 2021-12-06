@@ -87,6 +87,11 @@ def _is_manual_assignment(node):
     :param node: The node to check.
     :return: A boolean.
     """
-    if isinstance(node, ast.Assign) and node.value.func.id == 'property':
-        return True
-    return False
+    try:
+        if isinstance(node, ast.Assign):
+            if not isinstance(node.value, ast.Constant) or not isinstance(node.value, ast.Tuple):
+                if node.value.func.id == 'property':
+                    return True
+        return False
+    except AttributeError:
+        return False

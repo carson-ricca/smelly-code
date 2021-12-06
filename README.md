@@ -1,6 +1,39 @@
 # Smelly Code
 
+## File Structure
+
+## Project Plan
+
+- Week 8:
+    - Working on the project plan.
+    - Exploring different code smells that exist, and researching the most common ones.
+    - Might need to use GitHub API will need investigating.
+- Week 9:
+    - Set up the repository.
+    - Basic python setup, structure, etc…
+    - Define class level and method level code smells.
+    - Define them in English.
+- Week 10:
+    - Pick 5 smells from each category that I would like to identify.
+    - Set up models for each smell, and its attributes, description, etc...
+- Week 11:
+    - Begin writing code to determine smells.
+    - Begin writing test files to test the above code.
+- Week 12:
+    - Finish functions for determining smells.
+    - Finish test files.
+    - Test on the provided repository.
+    - Start on presentation/findings.
+- Week 13:
+    - Finish presentation/report/findings.
+- Week 14:
+    - Finalize and submit required deliverables.
+
 ## Code Smells
+
+### Total Code Smells in Repository
+
+- [https://docs.google.com/spreadsheets/d/1TM9KuGhCHhf2WNJwjxmbvJGBZEykZbCY5Q4KvgwLk7k/edit?usp=sharing](https://docs.google.com/spreadsheets/d/1TM9KuGhCHhf2WNJwjxmbvJGBZEykZbCY5Q4KvgwLk7k/edit?usp=sharing)
 
 ### Class Level Smells
 
