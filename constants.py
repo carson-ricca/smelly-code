@@ -23,6 +23,9 @@ class Constants:
     # The percentage of functions that delegate to other functions to be determined a middle man class.
     MIDDLE_MAN_PERCENTAGE = 0.5
 
+    # The maximum number of functions that are allowed to be chained.
+    MAX_CHAINED_FUNCTIONS = 1
+
     # The maximum cyclomatic complexity allowed for a class.
     MAX_CYCLOMATIC_COMPLEXITY = 20
 

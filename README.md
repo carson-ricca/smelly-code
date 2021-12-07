@@ -101,7 +101,8 @@ project ensure that `Python 3` is installed on your machine, then continue with 
 
 ### Total Code Smells in Repository
 
-- [https://docs.google.com/spreadsheets/d/1TM9KuGhCHhf2WNJwjxmbvJGBZEykZbCY5Q4KvgwLk7k/edit?usp=sharing](https://docs.google.com/spreadsheets/d/1TM9KuGhCHhf2WNJwjxmbvJGBZEykZbCY5Q4KvgwLk7k/edit?usp=sharing)
+- [https://docs.google.com/spreadsheets/d/1tJXRMzRGm2gtFQvw7nRJ_2UiIBiHPKie0t_1i0GLrAg/edit?usp=sharing](https://docs.google.com/spreadsheets/d/1tJXRMzRGm2gtFQvw7nRJ_2UiIBiHPKie0t_1i0GLrAg/edit?usp=sharing)
+    - Total counts for all code smells in the repository are at the bottom of the above file.
 
 ### Class Level Smells
 
@@ -143,9 +144,12 @@ project ensure that `Python 3` is installed on your machine, then continue with 
 - Method Chains:
     - Method calling a different method which calls a different method which calls a different method… and on and on (
       implemented).
-    - To detect this code smell I iterate over every node in the AST for each file, if the node is of the
+    - ~~To detect this code smell I iterate over every node in the AST for each file, if the node is of the
       type `ast.Call` then if the node has a `value` attribute. Having this attribute means it makes another function
-      call. If this happened on the same line then it is a method chain.
+      call. If this happened on the same line then it is a method chain.~~
+    - The above was my initial implementation of detection, but it turned out to be very inaccurate. I have improved it,
+      and it now makes much more sense. I iterate over every line in each file, I then compare the count of `').'` for
+      each line against a constant value that is the number of allowed function chains.
 - Too Many Parameters:
     - A very long list of parameters.
     - Parameter Number from _"Clean Code: A Handbook of Agile Software Craftsmanship"_.
