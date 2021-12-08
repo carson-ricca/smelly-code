@@ -27,7 +27,7 @@ project ensure that `Python 3` is installed on your machine, then continue with 
 
 ```
 .
-+-- .github/workflows (contains workflow for automated testing on github)
++-- .github/workflows (contains workflow for automated testing on GitHub)
 |   +-- ci.yml
 +-- data
 |   +-- canvas-gamification-master.zip (raw repo downloaded from GitHub)
